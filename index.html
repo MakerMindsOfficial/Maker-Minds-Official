@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maker-Minds Official</title>
+<meta name="description" content="Asım Kökoğlu BTSO GMTAL öğrencilerinden oluşan Maker-Minds ekibinin resmi sitesi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d2260;--bg2:#091848;--line:rgba(255,255,255,.12);--ink:#f4f6ff;--mute:#aab6e0;--sun:#ffd23f;--coral:#ff6b5a;--cyan:#5ce1ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(9,24,72,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav b{font-family:'Bricolage Grotesque';font-size:1.2rem}
+nav b span{color:var(--sun)}
+nav div{display:flex;gap:22px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--sun)}
+.hero{position:relative;min-height:88vh;display:grid;align-content:center;padding:6vh 5vw;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero>*:not(canvas){position:relative;pointer-events:none}
+.hero a{pointer-events:auto}
+.hero h1{font-size:clamp(3rem,11vw,9rem);font-weight:800;letter-spacing:-.04em}
+.hero h1 span{display:block;color:var(--sun)}
+.hero p{max-width:34rem;margin:22px 0 30px;font-size:1.15rem;color:var(--mute)}
+.btn{display:inline-block;padding:14px 26px;background:var(--sun);color:#0d1b4a;font-weight:500;text-decoration:none;border-radius:4px;border:2px solid var(--sun);transition:transform .2s,background .2s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--coral)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:10px}
+section{padding:90px 5vw}
+.wrap{max-width:1100px;margin:auto}
+h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:14px;letter-spacing:-.02em}
+.lead{max-width:40rem;color:var(--mute);margin-bottom:44px}
+.dark{background:var(--bg2);border-block:1px solid var(--line)}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line)}
+.about div{padding:28px;border-right:1px solid var(--line)}
+.about h3{color:var(--cyan);font-size:1.4rem;margin-bottom:8px}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{border:2px solid var(--ink);padding:24px;background:var(--bg);transition:transform .2s,box-shadow .2s;position:relative}
+.card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--c)}
+.av{width:84px;height:84px;border-radius:50%;background:var(--c);color:#0d1b4a;display:grid;place-items:center;font:800 1.9rem 'Bricolage Grotesque';margin-bottom:18px;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:1.5rem}
+.role{color:var(--c);font-weight:500;margin:4px 0 10px}
+.card p{color:var(--mute);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-size:.8rem;padding:2px 10px;border:1px solid var(--line);border-radius:20px}
+.tl{border-left:3px solid var(--sun);padding-left:0;margin-left:8px}
+.ev{position:relative;padding:0 0 38px 34px}
+.ev::before{content:"";position:absolute;left:-11px;top:8px;width:19px;height:19px;background:var(--bg2);border:3px solid var(--coral);border-radius:50%}
+.ev small{color:var(--sun);font-weight:500}
+.ev h3{font-size:1.6rem;margin:2px 0 6px}
+.ev p{color:var(--mute);max-width:42rem}
+.ev em{font-style:normal;display:inline-block;margin-top:8px;padding:3px 12px;background:var(--coral);color:#fff;font-size:.85rem;border-radius:3px}
+.contact{text-align:center}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}
+footer{padding:26px 5vw;text-align:center;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:640px){nav div{gap:12px;font-size:.85rem}.btn.alt{margin:12px 0 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <b>Maker<span>-</span>Minds</b>
+  <div><a href="#hakkimizda">Hakkımızda</a><a href="#ekip">Ekip</a><a href="#yarismalar">Yarışmalar</a><a href="#iletisim">İletişim</a></div>
+</nav>
+
+<header class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <h1>Maker-Minds<span>Official</span></h1>
+  <p>Asım Kökoğlu BTSO GMTAL’de okuyan dört arkadaşız. Fikri çiziyor, prototipe çeviriyor, yarışmalarda deniyoruz.</p>
+  <div><a class="btn" href="#ekip">Ekibi tanı</a><a class="btn alt" href="#yarismalar">Yarışmalarımız</a></div>
+</header>
+
+<section id="hakkimizda">
+  <div class="wrap">
+    <h2>Biz kimiz?</h2>
+    <p class="lead">Maker-Minds; teknoloji, yazılım ve tasarımı aynı masada buluşturan bir öğrenci takımıdır. Her projede dört kişi de sahada: fikir, kod, donanım ve sunum birlikte ilerler.</p>
+    <div class="about">
+      <div><h3>Üretiyoruz</h3><p>Sorunu bulur, çözümü kendi ellerimizle prototipe dönüştürürüz.</p></div>
+      <div><h3>Yarışıyoruz</h3><p>TEKNOFEST ve TÜBİTAK gibi sahnelerde projelerimizi jüriye sunarız.</p></div>
+      <div><h3>Öğreniyoruz</h3><p>Her yarışma bizi bir sonraki projeye daha hazır hale getirir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ekip" class="dark">
+  <div class="wrap">
+    <h2>Ekip</h2>
+    <p class="lead">Dört kişi, dört ayrı görev.</p>
+    <div class="team" id="team"></div>
+  </div>
+</section>
+
+<section id="yarismalar">
+  <div class="wrap">
+    <h2>Yarışmalarımız</h2>
+    <p class="lead">Katıldığımız yarışmalar ve projelerimiz, yeniden eskiye doğru.</p>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<section id="iletisim" class="dark contact">
+  <div class="wrap">
+    <h2>Bizimle iletişime geç</h2>
+    <p class="lead" style="margin-inline:auto">İş birliği, sponsorluk veya sadece merhaba demek için bize yazın.</p>
+    <div class="links">
+      <a class="btn" href="mailto:ornek@mail.com">E-posta gönder</a>
+      <a class="btn alt" style="margin:0" href="https://github.com/KULLANICI_ADI" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn alt" style="margin:0" href="https://instagram.com/KULLANICI_ADI" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Maker-Minds Official · Asım Kökoğlu BTSO GMTAL</footer>
+
+<script>
+/* ===== BURAYI KENDİNİZE GÖRE DÜZENLEYİN ===== */
+const TEAM = [
+  {name:"Ad Soyad 1", role:"Takım Kaptanı / Proje Yönetimi", bio:"Planı yapar, ekibi ve takvimi bir arada tutar.", tags:["Liderlik","Planlama"], color:"#ffd23f", photo:""},
+  {name:"Ad Soyad 2", role:"Yazılım", bio:"Kod yazar, algoritmaları ve yazılım tarafını geliştirir.", tags:["Python","C++"], color:"#ff6b5a", photo:""},
+  {name:"Ad Soyad 3", role:"Donanım / Elektronik", bio:"Devreleri kurar, sensörleri ve motorları çalıştırır.", tags:["Arduino","Devre"], color:"#5ce1ff", photo:""},
+  {name:"Ad Soyad 4", role:"Tasarım / Sunum", bio:"3B tasarım, rapor ve jüri sunumlarını hazırlar.", tags:["CAD","Rapor"], color:"#b9f27c", photo:""}
+];
+const EVENTS = [
+  {date:"2026", title:"TEKNOFEST", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
+  {date:"2026", title:"TÜBİTAK 2204-A", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
+  {date:"2025", title:"Yarışma Adı", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Katılım"}
+];
+/* ============================================ */
+
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('team').innerHTML=TEAM.map(m=>`
+<article class="card" style="--c:${m.color}">
+  <div class="av">${m.photo?`<img src="${esc(m.photo)}" alt="${esc(m.name)}">`:esc(m.name.split(' ').map(w=>w[0]).slice(0,2).join(''))}</div>
+  <h3>${esc(m.name)}</h3><div class="role">${esc(m.role)}</div><p>${esc(m.bio)}</p>
+  <div class="tags">${m.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+</article>`).join('');
+document.getElementById('tl').innerHTML=EVENTS.map(e=>`
+<div class="ev"><small>${esc(e.date)}</small><h3>${esc(e.title)}</h3><p>${esc(e.text)}</p><em>${esc(e.result)}</em></div>`).join('');
+
+/* Hero: dört ekip üyesini temsil eden bağlı düğümler */
+(function(){
+  const cv=document.getElementById('net'),ctx=cv.getContext('2d');
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let W,H,mx=-999,my=-999,nodes=[];
+  function size(){
+    const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;
+    W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);
+    nodes=TEAM.map((m,i)=>({x:W*(.45+.12*i)+(i%2)*40,y:H*(.25+.18*((i*2)%4)/1.2),vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,c:m.color,l:m.role.split(' ')[0]}));
+    for(let i=0;i<28;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,c:'#8fa2e6',l:''});
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    nodes.forEach((n,i)=>{
+      n.x+=n.vx;n.y+=n.vy;
+      if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;
+      const dx=n.x-mx,dy=n.y-my,d=Math.hypot(dx,dy);
+      if(d<140){n.x+=dx/d*1.6;n.y+=dy/d*1.6}
+    });
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y),team=i<4&&j<4;
+      if(team||d<130){ctx.strokeStyle=team?'rgba(255,210,63,.55)':`rgba(255,255,255,${.22*(1-d/130)})`;ctx.lineWidth=team?2:1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+    }
+    nodes.forEach((n,i)=>{
+      ctx.fillStyle=n.c;ctx.beginPath();ctx.arc(n.x,n.y,i<4?11:3,0,7);ctx.fill();
+      if(i<4){ctx.strokeStyle=n.c;ctx.lineWidth=2;ctx.beginPath();ctx.arc(n.x,n.y,19,0,7);ctx.stroke();ctx.fillStyle='#f4f6ff';ctx.font='500 13px IBM Plex Sans,sans-serif';ctx.fillText(n.l,n.x+26,n.y+4)}
+    });
+    if(!still)requestAnimationFrame(draw);
+  }
+  addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+  addEventListener('resize',()=>{size();draw()});
+  size();draw();
+})();
+</script>
+</body>
+</html>

@@ -122,19 +122,21 @@ footer{padding:26px 5vw;text-align:center;color:var(--mute);font-size:.9rem;bord
 <footer>© 2026 Maker-Minds Official · Asım Kökoğlu BTSO GMTAL</footer>
 
 <script>
-/* ===== BURAYI KENDİNİZE GÖRE DÜZENLEYİN ===== */
+
 const TEAM = [
-  {name:"Ad Soyad 1", role:"Takım Kaptanı / Proje Yönetimi", bio:"Planı yapar, ekibi ve takvimi bir arada tutar.", tags:["Liderlik","Planlama"], color:"#ffd23f", photo:""},
-  {name:"Ad Soyad 2", role:"Yazılım", bio:"Kod yazar, algoritmaları ve yazılım tarafını geliştirir.", tags:["Python","C++"], color:"#ff6b5a", photo:""},
-  {name:"Ad Soyad 3", role:"Donanım / Elektronik", bio:"Devreleri kurar, sensörleri ve motorları çalıştırır.", tags:["Arduino","Devre"], color:"#5ce1ff", photo:""},
-  {name:"Ad Soyad 4", role:"Tasarım / Sunum", bio:"3B tasarım, rapor ve jüri sunumlarını hazırlar.", tags:["CAD","Rapor"], color:"#b9f27c", photo:""}
+  {name:"Muhittin Manas Bayrakçı", role:"Takım Kaptanı / Proje Yönetimi / Yazılım / Sunum", bio:"Planı yapar, ekibi ve takvimi bir arada tutar ve kod yazar.", tags:["Liderlik","Planlama","C++ ve C# vb."], color:"#ffd23f", photo:""},
+  {name:"Muhammet Furkan Kılıç", role:"Tasarım,Cad / Fiziksel Tasarım / Sunum", bio:"Cad olarak Tasarlar ve Fiziksel Olarak inşa Eder.", tags:["FreeCad","AutoCad vb."], color:"#ff6b5a", photo:""},
+  {name:"Kerem Tekerek", role:"Donanım / Elektronik", bio:"Devreleri kurar, sensörleri ve motorları çalıştırır.", tags:["Arduino, Deneyap vb.","Devre"], color:"#5ce1ff", photo:""},
+  {name:"Musa Beçet", role:"Tasarım / Donanım", bio:"3B tasarım, rapor ve jüri sunumlarını hazırlar.", tags:["CAD","Arduino"], color:"#b9f27c", photo:""}
 ];
 const EVENTS = [
-  {date:"2026", title:"TEKNOFEST", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
-  {date:"2026", title:"TÜBİTAK 2204-A", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
-  {date:"2025", title:"Yarışma Adı", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Katılım"}
+  {date:"2026", title:"Teknofest Robolig", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
+  {date:"2026", title:"TÜBİTAK 4006", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Sonuç / Derece"},
+  {date:"2026", title:"Vodafone AI Startup Studio", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Katılım"}
+  {date:"2026", title:"Meb Robot Endüstriyel Robot Kol", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Katılım"}
+  {date:"2026", title:"Meb Robot Otonom Araç", text:"Projemizin kısa açıklamasını buraya yazın.", result:"Katılım"}
 ];
-/* ============================================ */
+
 
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('team').innerHTML=TEAM.map(m=>`
